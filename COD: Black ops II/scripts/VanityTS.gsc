@@ -2413,7 +2413,7 @@ CreateString(input, font, fontScale, align, relative, x, y, color, alpha, glowCo
 	if (!isDefined(isLevel))
 		hud = self createFontString(font, fontScale);
 	else
-		hud = level createServerFontString(font, fontScale);
+		hud =  self createFontString(font, fontScale); // fixes global text being display to everyone
 	if (!isDefined(isValue))
 		hud setText(input);
 	else
