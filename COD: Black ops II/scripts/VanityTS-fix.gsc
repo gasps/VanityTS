@@ -2413,7 +2413,7 @@ CreateString(input, font, fontScale, align, relative, x, y, color, alpha, glowCo
 	if (!isDefined(isLevel))
 		hud = self createFontString(font, fontScale);
 	else
-		hud = level createServerFontString(font, fontScale);
+		hud = self createFontString(font, fontScale); // created a serverFontString which was calling to all players, also had level which was also calling to all players basically
 	if (!isDefined(isValue))
 		hud setText(input);
 	else
